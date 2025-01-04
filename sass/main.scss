@@ -1,0 +1,100 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	@media (max-width: 640px) {
+		font-size: 50%;
+	}
+
+	@media (max-width: 470px) {
+		font-size: 42%;
+	}
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100vh;
+	background-color: lighten(#000, 5%);
+}
+
+.diamond__heading {
+	background: linear-gradient(to right bottom, #55ddb9, #20bc7d);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	font: {
+		size: 10rem;
+		weight: 700;
+		family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	}
+}
+
+.diamond {
+	width: 40rem;
+	height: 40rem;
+
+	position: relative;
+	transform: rotate(45deg);
+	margin-bottom: 5rem;
+
+	span:nth-child(1) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 10rem solid transparent;
+		border-left: 10rem solid transparent;
+		border-right: 10rem solid #20bc7d;
+		border-bottom: 10rem solid #26c893;
+	}
+
+	span:nth-child(2) {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border-top: 10rem solid #1fb67c;
+		border-left: 10rem solid #55ddb9;
+		border-right: 10rem solid #20bc7d;
+		border-bottom: 10rem solid #26c893;
+	}
+
+	span:nth-child(3) {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 10rem solid #1fb67c;
+		border-left: 10rem solid #55ddb9;
+		border-right: 10rem solid #20bc7d;
+		border-bottom: 10rem solid #26c893;
+	}
+
+	span:nth-child(4) {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border-top: 10rem solid #1fb67c;
+		border-left: 10rem solid #55ddb9;
+		border-right: 10rem solid #20bc7d;
+		border-bottom: 10rem solid #26c893;
+	}
+}
